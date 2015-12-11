@@ -12,6 +12,9 @@
       <p>Try this form.</p>
       <button id="myButton" type="submit">Click Me!</button>
       <div class="myText"></div>
+      <button id="calculate" type="submit">Calculate</button>
+      <p id="result">Result is:</p>
+      <a href="#main"< id="maintag">Random Link</a>
     </main>
     <footer>
     </footer>
@@ -20,6 +23,33 @@
     myButton.addEventListener("click", function(){
 	     alert("you clicked me");
      });
+
+     var myCalculate = document.getElementById('calculate');
+     myCalculate.addEventListener("click",
+     function (){
+       calculator();
+});
+
+
+
+
+  function calculator(){
+     var val1 = prompt (" Enter First Number");
+     var val2 = prompt (" Enter 2nd Number");
+
+     var myPara = document.getElementById('result');
+     var myParaContent = myPara.textContent;
+     myPara.textContent = myParaContent + " " + (parseInt(val1) + parseInt(val2));
+
+     var myLink = document.getElementById('maintag');
+     myLink.addEventListener("mouseover", function(){
+       calculator();
+     });
+
+
+
+
+  }
     </script>
 </body>
 </html>
